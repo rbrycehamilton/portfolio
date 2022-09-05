@@ -1,0 +1,72 @@
+<!-- My Skills Variables -->
+
+{{ $myskills_title := "Our Specialties" }}
+{{ $myskills_subtitle := "We Believe in Holistic Solutions" }}
+{{ $myskills_paragraph1 := "We believe in problem-solving through a holistic approach. It only makes sense that your website, lead magnets, drip campaigns, and content are cohesive in style and message." }}
+{{ $myskills_paragraph2 := "Our approach is to launch all of your messaging simultaneously so that you keep your future customers engaged in your mission and message from the moment your new strategies are implemented." }}
+{{ $myskills_web := "Web Design" }}
+{{ $myskills_lead := "Lead Magnets" }}
+{{ $myskills_auto := "Automated Workflows" }}
+{{ $myskills_copy := "Copywriting" }}
+{{ $myskills_individual := "Individualized Solutions" }}
+{{ $myskills_conulting := "Consulting and Training" }}
+
+<!-- My Skills Variables end -->
+
+<section id="my-skills" class="ts-block pb-5">
+    <div class="container">
+        <div class="ts-title text-center">
+            <h2>{{$myskills_title}}</h2>
+        </div>
+        <!--end ts-title-->
+        <h4>{{$myskills_subtitle}}</h4>
+        <div class="row">
+            <div class="col-md-6">
+                <p>
+                    {{$myskills_paragraph1}}
+                </p>
+                <p>
+                   {{$myskills_paragraph2}}
+                </p>
+                <a href="#contact" class="btn btn-outline-light mb-5">Contact Us</a>
+            </div>
+            <!--end col-md-6-->
+            <div class="col-md-6">
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_web}}</h5>
+                    
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_lead}}</h5>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_auto}}</h5>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_copy}}</h5>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_individual}}</h5>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+                <div class="progress" data-progress-width="100%">
+                    <h5 class="ts-progress-title">{{$myskills_conulting}}</h5>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+                <!--end progress-->
+            </div>
+            <!--end col-md-6-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>

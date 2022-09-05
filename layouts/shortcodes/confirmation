@@ -1,0 +1,22 @@
+<!-- Confirmation Variables -->
+
+{{ $thanks := "Thanks For Reaching Out" }}
+{{ $thanks2 := "You Can Expect To Hear Back From Us Within Two Business Days." }}
+{{ $thanks3 := "We Look Forward To Speaking With You Soon!" }}
+
+
+<!-- My Services Variables End -->
+
+<section id="my-services" class="ts-block ts-xs-text-center pb-0">
+    <div class="container">
+        <div class="ts-title text-center">
+            <br><h1>{{$thanks}}</h1><br>
+            <h2>{{$thanks2}}</h2><br>
+            <h3>{{$thanks3}}</h3>
+        </div>
+        <!--end ts-title-->
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--END MY SERVICES *************************************************************************************-->

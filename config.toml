@@ -1,0 +1,6 @@
+baseURL = 'https://webnertia.com/'
+languageCode = 'en-us'
+title = 'Webnertia'
+[taxonomies]
+    tag = "tags"
+    category = "categories"

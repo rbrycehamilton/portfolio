@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="container ts-block">
+    <img src="{{ .Params.image }}" style="width: 640px; height: auto; max-width: 100%; padding-bottom: 1rem;">
+      <h1>{{ .Title }}</h1>
+        <span>Author: {{ .Params.author }}</span><br>
+        <span>Publish Date: {{ .Date.Format "January 2, 2006" }}</span>
+        <div style="padding-top: 1rem;">{{ if .Params.tags }}Tags: {{range .Params.tags}}<a href="{{ `/tags/` | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+        <div>{{ if .Params.categories }}Categories: {{range .Params.categories}}<a href="{{ `/categories/` | relLangURL }}{{ . | urlize }}">{{ . }}</a> {{end}}{{end}}</div>
+        <div style="text-align: justify; padding-top: 2rem;" >{{ .Content }}</div>
+</section>
+{{ end }}

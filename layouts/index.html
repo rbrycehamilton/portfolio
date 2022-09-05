@@ -1,0 +1,60 @@
+{{ define "hero" }}
+
+ <!-- Hero Variables -->
+
+ {{ $hero_background := "/assets/img/hero-background.jpg" }}
+ {{ $welcome := "Welcome to Webnertia" }}
+ {{ $descriptor_1 := "Custom Websites" }}
+ {{ $descriptor_2 := "Lead Magnets" }}
+ {{ $descriptor_3 := "Automated Workflows" }}
+ {{ $descriptor_4 := "Individualized Solutions" }}
+ {{ $subtitle := "We are a dedicated web agency passionate about providing you and your business with a custom website and the integrated tech solutions you need to thrive." }}
+
+ <!-- Hero Variables end -->
+
+    <!--*********************************************************************************************************-->
+    <!--************ HERO ***************************************************************************************-->
+    <!--*********************************************************************************************************-->
+    <div id="ts-hero" class="ts-animate-hero-items">
+        <!--HERO CONTENT ****************************************************************************************-->
+        <div class="container position-relative h-100 ts-align__vertical">
+            <div class="row w-100">
+                <div class="col-md-8">
+                    <!--TITLE -->
+                    <h1>{{$welcome}}</h1>
+                    <h1 class="ts-bubble-border">
+                        <span class="ts-title-rotate">
+                            <span class="active">{{$descriptor_1}}</span>
+                            <span>{{$descriptor_2}}</span>
+                            <span>{{$descriptor_3}}</span>
+                            <span>{{$descriptor_4}}</span>
+                        </span>
+                    </h1>
+                    <h2>{{$subtitle}}</h2>
+                </div>
+                <!--end col-md-8-->
+            </div>
+            <!--end row-->
+            <a href="#my-services" class="ts-btn-effect position-absolute ts-bottom__0 ts-left__0 ts-scroll ml-3 mb-3">
+                <span class="ts-visible ts-circle__sm rounded-0 ts-bg-primary">
+                    <i class="fa fa-arrow-down text-white"></i>
+                </span>
+                <span class="ts-hidden ts-circle__sm rounded-0">
+                    <i class="fa fa-arrow-down text-white"></i>
+                </span>
+            </a>
+        </div>
+        <!--end container-->
+        <!--END HERO CONTENT ************************************************************************************-->
+        <!--HERO BACKGROUND *************************************************************************************-->
+        <div class="ts-background">
+            <div class="ts-background-image" data-bg-image="{{$hero_background}}"></div>
+        </div>
+        <!--END HERO BACKGROUND *********************************************************************************-->
+    </div>
+    <!--end #hero-->
+{{ end }}
+
+{{ define "main" }}
+    {{ .Content }}
+{{ end }}

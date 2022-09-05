@@ -1,0 +1,51 @@
+<!-- About Variables -->
+
+{{ $about_title := "About" }}
+{{ $about_hi := "Hello There" }}
+{{ $about_paragraph := "I understand time is a valuable commodity and that your efforts must be focused where they matter most. This fact motivates me to take a personalized approach to provide solutions that move your business forward. Let's face it, the world does business online, and we want to ensure your business has the tools it needs to thrive." }}
+{{ $about_name := "Bryce Hamilton" }}
+{{ $about_email := "hello@webnertia.com" }}
+{{ $about_phone := "555-555-5555" }}
+{{ $about_img := "/assets/img/headshot2.jpg" }}
+
+
+<!-- About Variables end -->
+
+<section id="about-me" class="ts-block pb-4">
+    <div class="container">
+        <div class="ts-title text-center">
+            <h2>{{$about_title}}</h2>
+        </div>
+        <!--end ts-title-->
+        <div class="row ts-align__vertical">
+            <div class="col-md-6">
+                <img src="{{$about_img}}" alt="About Me Image" class="mw-100 mb-5">
+            </div>
+            <div class="col-md-6">
+                <h4 class="ts-bubble-border">{{$about_hi}}</h4>
+                <p>
+                    {{$about_paragraph}}
+                </p>
+                <dl class="ts-column-count-2">
+                    <dt>Name:</dt>
+                    <dd>{{$about_name}}</dd>
+                    <dt>Let's Stategize:</dt>
+                    <dd><!-- Calendly link widget begin -->
+                        <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                        <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                        <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/webnertia/strategy'});return false;" style="color: white">Schedule time with me</a>
+                        <!-- Calendly link widget end --></dd>
+                    <dt>Email:</dt>
+                    <dd><a href="mailto:{{$about_email}}" style="color: white;">{{$about_email}}</a></dd>
+                    <dt style="color: transparent;">Let's Stategize:</dt>
+                </dl>
+                <hr class="ts-hr-light mb-5">
+                <a href="#contact" class="ts-btn-effect mr-2">
+                    <span class="ts-visible btn btn-primary ts-btn-arrow">Contact Me</span>
+                    <span class="ts-hidden btn btn-primary ts-btn-arrow" data-bg-color="var(--default-color)">Contact Me</span>
+                </a>
+            </div>
+        </div>
+        <!--end row-->
+    </div>
+</section>

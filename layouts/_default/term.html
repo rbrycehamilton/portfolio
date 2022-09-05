@@ -1,0 +1,18 @@
+{{ define "main" }}
+<section class="container ts-block">
+  <h1>All posts for {{ .Type | singularize }} <strong>{{ .Title }}</strong></h1>
+    {{ range .Data.Pages }}
+      <div style="padding: 1rem;">
+        <a href="{{.Permalink}}"><img src="{{ .Params.image }}" style="width: 640px; height: auto; max-width: 100%; padding-top: 1rem; padding-bottom: 1rem;"></a>
+        <div>
+          <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2><br>
+          <span>{{ .Date.Format "January 2, 2006" }}</span><br>
+          <span>{{ if .Params.author }} Author: {{ .Params.author }}</span><br>{{end}}
+        </div>
+      </div>
+      <div style="padding: 1rem;">
+        <div>{{ truncate 600 .Content }}</div>
+      </div>
+    {{ end }}
+</section>
+{{ end}}

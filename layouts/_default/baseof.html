@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,500,700">
+        <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+        <link rel="stylesheet" href="/assets/font-awesome/css/fontawesome-all.min.css">
+        <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+        <link rel="stylesheet" href="/assets/css/odometer-theme-default.css">
+        <link rel="stylesheet" href="/assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="/assets/css/style.css">
+        <link rel="icon" href="/assets/img/logo.png" type="png">
+        {{ $title := site.Title }}
+                {{ if not .IsHome }}
+                    {{ $title = printf "%s | %s" .Title site.Title }}
+                {{ end }}
+        <title>{{ $title }}</title>
+    </head>
+
+    <!-- Navbar Variables -->
+
+    {{ $logo := "/assets/img/logo.png" }}
+    {{ $navlink1 := "Home" }}
+    {{ $navlink2 := "Services" }}
+    {{ $navlink3 := "About" }}
+    {{ $navlink4 := "Our Specialties" }}
+    {{ $navlink5 := "Our Work" }}
+    {{ $navlink6 := "Contact Us" }}
+    {{ $navlink7 := "Blog" }}
+    {{ $navlink7_destination := "/blog" }}
+
+    <!-- Navbar Variables end -->
+
+    <body data-spy="scroll" data-target=".navbar" class="has-loading-screen">
+        <div class="ts-page-wrapper" id="page-top">
+            <!--NAVIGATION ******************************************************************************************-->
+            <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white">
+                <div class="container">
+                    <a class="navbar-brand ts-push-down__50 position-absolute ts-bottom__0 bg-white pb-0 ts-z-index__1 ts-scroll" href="/#page-top">
+                        <img src="{{ $logo }}" alt="logo" style="max-width: 64px; height: auto;">
+                    </a>
+                    <!--end navbar-brand-->
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--end navbar-toggler-->
+                    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav d-block d-lg-flex ml-auto text-right">
+                            <a class="nav-item nav-link active ts-scroll" href="/#page-top"><b>{{$navlink1}}</b><span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active ts-scroll" href="/#my-services"><b>{{$navlink2}}</b></a>
+                            <a class="nav-item nav-link active ts-scroll" href="/#about-me"><b>{{$navlink3}}</b></a>
+                            <a class="nav-item nav-link active ts-scroll" href="/#my-skills"><b>{{$navlink4}}</b></a>
+                            <a class="nav-item nav-link active ts-scroll" href="/#testimonials"><b>{{$navlink5}}</b></a>
+                            <a class="nav-item nav-link active ts-scroll" href="#contact"><b>{{$navlink6}}</b></a>
+                            <a class="nav-item nav-link active ts-scroll" href="{{$navlink7_destination}}"><b>{{$navlink7}}</b></a>
+                        </div>
+                        <!--end navbar-nav-->
+                    </div>
+                    <!--end collapse-->
+                </div>
+                <!--end container-->
+            </nav>
+            <!--end navbar-->
+            {{ block "hero" . }}{{end}}
+            {{ block "main" . }}{{end}}
+
+        <!--*********************************************************************************************************-->
+        <!--************ FOOTER *************************************************************************************-->
+        <!--*********************************************************************************************************-->
+
+        <!-- Footer Variables -->
+
+        {{ $get_in_touch := "Get In Touch" }}
+        {{ $send_message := "Send Us A Message" }}
+        {{$company_name := "Webnertia"}}
+        {{ $footer_background := "/assets/img/hero-background.jpg" }}
+
+        <!-- Footer Variables end -->
+
+        <footer id="ts-footer" class="mt-5">
+
+            <section id="contact" class="ts-block ts-separate-bg-element" data-bg-image="{{$footer_background}}" data-bg-image-opacity=".4">
+                <div class="container">
+                    <div class="ts-title text-center">
+                        <h2 class="ts-bubble-border">{{ $get_in_touch }}</h2>
+                    </div>
+
+                    <div class="pt-5">
+                        <div class="row" style="display: flex; justify-content: center;">
+                            <div class="col-md-8">
+                                <h3>{{$send_message}}</h3>
+                                <form action="/confirmation" id="form-contact" class="clearfix ts-form ts-form-email" name="contact-us-portfolio" method="post" data-netlify="true">
+                                    <div class="row">
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="name">Name *</label>
+                                                <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
+                                            </div>
+                                            <!--end form-group -->
+                                        </div>
+                                        <!--end col-md-6 col-sm-6 -->
+                                        <div class="col-md-6 col-sm-6">
+                                            <div class="form-group">
+                                                <label for="email">Email *</label>
+                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                            </div>
+                                            <!--end form-group -->
+                                        </div>
+                                        <!--end col-md-6 col-sm-6 -->
+                                    </div>
+                                    <!--end row -->
+                                    <div class="form-group">
+                                        <label for="subject">Subject *</label>
+                                        <input type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+                                    </div>
+                                    <!--end form-group -->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="message">Message *</label>
+                                                <textarea class="form-control" id="message" rows="5" name="message" placeholder="Message" required></textarea>
+                                            </div>
+                                            <!--end form-group -->
+                                        </div>
+                                        <!--end col-md-12 -->
+                                    </div>
+                                    <!--end row -->
+                                    <div class="form-group clearfix">
+                                        <button type="submit" class="btn btn-primary float-right ts-btn-arrow" id="form-contact-submit">Send</button>
+                                    </div>
+                                    <!--end form-group -->
+                                    <div class="form-contact-status"></div>
+                                </form>
+                                <!--end form-contact -->
+                            </div>
+                        </div>
+                        <!--end row-->
+                    </div>
+                </div>
+                <!--end container-->
+            </section>
+            <!--end #contact-->
+
+            <div class="text-dark bg-white">
+                <div class="container py-3 position-relative">
+                    <small>© {{ .Date.Format "2006" }} {{$company_name}}</small>
+                    <a href="#page-top" class="ts-circle__xs rounded-0 bg-dark position-absolute ts-right__0 ts-top__0 ts-push-up__50 ts-scroll">
+                        <i class="fa fa-arrow-up text-white"></i>
+                    </a>
+                </div>
+            </div>
+
+        </footer>
+        <!--end #footer-->
+
+    </div>
+    <!--end page-->
+
+        <script src="/assets/js/custom.hero.js"></script>
+        <script src="/assets/js/jquery-3.3.1.min.js"></script>
+        <script src="/assets/js/popper.min.js"></script>
+        <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+        <script src="/assets/js/isInViewport.jquery.js"></script>
+        <script src="/assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="/assets/js/scrolla.jquery.min.js"></script>
+        <script src="/assets/js/jquery.validate.min.js"></script>
+        <script src="/assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+        <script src="/assets/js/odometer.min.js"></script>
+        <script src="/assets/js/owl.carousel.min.js"></script>
+        <script src="/assets/js/custom.js"></script>
+
+    </body>
+</html>

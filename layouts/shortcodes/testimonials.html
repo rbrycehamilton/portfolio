@@ -1,0 +1,53 @@
+<!-- Testimonials Variables -->
+
+{{ $testimonials_title := "Our Work" }}
+{{ $testimonials_subtitle := "Visit Some of Our Fully-Customizable Templates (Available at a Discount)" }}
+{{ $testimonials_img1 := "/assets/img/fitness_site.png" }}
+{{ $testimonials_img2 := "/assets/img/preventative_care_site.png" }}
+{{ $testimonials_img3 := "/assets/img/roofing_site.png" }}
+{{ $testimonials_img4 := "/assets/img/church_site.png" }}
+{{ $testimonials_img_link1 := "https://fitness.webnertia.com" }}
+{{ $testimonials_img_link2 := "https://health.webnertia.com" }}
+{{ $testimonials_img_link3 := "https://roofing.webnertia.com" }}
+{{ $testimonials_img_link4 := "https://church.webnertia.com" }}
+
+
+<!-- Testimonials Variables end -->
+
+<section id="testimonials" class="ts-block text-center pb-5">
+    <div class="container">
+        <div class="ts-title">
+            <h2>{{$testimonials_title}}</h2>
+        </div>
+        <h3>{{$testimonials_subtitle}}</h3>
+        <!--end ts-title-->
+        <div class="row">
+            <div class="col-md-8 offset-md-2">
+                <div class="owl-carousel" data-owl-dots="1" data-owl-loop="1" data-animate="ts-fadeInUp">
+                    <div class="slide mb-5">
+                        <a href="{{$testimonials_img_link1}}" target="_blank"><img src="{{$testimonials_img1}}"></a>
+                    </div>
+                    <!--end slide-->
+                    <div class="slide mb-5">
+                        <a href="{{$testimonials_img_link2}}" target="_blank"><img src="{{$testimonials_img2}}"></a>
+                    </div>
+                    <!--end slide-->
+                    <div class="slide mb-5">
+                        <a href="{{$testimonials_img_link3}}" target="_blank"><img src="{{$testimonials_img3}}"></a>
+                    </div>
+                    <!--end slide-->
+                    <div class="slide mb-5">
+                        <a href="{{$testimonials_img_link4}}" target="_blank"><img src="{{$testimonials_img4}}"></a>
+                    </div>
+                    <!--end slide-->
+                    
+                </div>
+                <!--end owl-carousel-->
+            </div>
+            <!--end col-md-8-->
+        </div>
+        <!--end row-->
+    </div>
+    <!--end container-->
+</section>
+<!--end #testimonials ts-block-->
